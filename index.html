@@ -312,30 +312,46 @@
     font-size:21px;
     color:var(--navy);
   }
-  .parents-grid{
+  .parents-cols{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
-    text-align:center;
+    gap:16px 24px;
+    max-width:460px;
+    margin:0 auto;
   }
-  @media (max-width:560px){ .parents-grid{gap:20px;} }
+  .sponsor-heads{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    max-width:520px;
+    margin:0 auto 10px;
+  }
   .sponsor-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:10px 30px;
-    font-size:20px;
+    gap:9px 20px;
+    font-size:18px;
     color:var(--navy);
-    max-width:560px;
+    max-width:520px;
     margin:0 auto;
+    text-align:center;
   }
-  @media (max-width:560px){ .sponsor-grid{gap:8px 16px; font-size:16px;} }
-  .sponsor-grid .col-head{
+  .sponsor-name{
+    white-space:nowrap;
+    font-size:clamp(11px, 3.6vw, 18px);
+    text-align:center;
+  }
+  .sponsor-name.small-fit{
+    font-size:clamp(9.5px, 3vw, 15px);
+  }
+  @media (max-width:560px){ .sponsor-grid{gap:8px 12px;} }
+  .col-head{
     font-style:italic;
     font-weight:700;
     color:var(--royal);
     font-size:15px;
     letter-spacing:1.5px;
     margin-bottom:8px;
+    text-align:center;
   }
   .party-cols{
     display:grid;
@@ -620,15 +636,18 @@
   <h2 class="section-title">Wedding Entourage</h2>
 
   <div class="ent-block">
-    <div class="parents-grid">
-      <div>
-        <div class="ent-role">Parents of the Groom</div>
-        <div class="ent-names">Mr. Demetrio Cruz<br>Mrs. Josefina Cruz</div>
-      </div>
-      <div>
-        <div class="ent-role">Parents of the Bride</div>
-        <div class="ent-names">Mr. Ramon Thaddeus Jugueta<br>Mrs. Fe Jugueta</div>
-      </div>
+    <div class="ent-role">Parents of the Groom</div>
+    <div class="parents-cols">
+      <div class="ent-names">Mr. Demetrio Cruz</div>
+      <div class="ent-names">Mrs. Josefina Cruz</div>
+    </div>
+  </div>
+
+  <div class="ent-block" style="margin-top:36px;">
+    <div class="ent-role">Parents of the Bride</div>
+    <div class="parents-cols">
+      <div class="ent-names">Mr. Ramon Thaddeus Jugueta</div>
+      <div class="ent-names">Mrs. Fe Jugueta</div>
     </div>
   </div>
 
@@ -636,31 +655,29 @@
 
   <div class="ent-block">
     <div class="ent-role">Principal Sponsors</div>
+    <div class="sponsor-heads">
+      <div class="col-head">Ninongs</div>
+      <div class="col-head">Ninangs</div>
+    </div>
     <div class="sponsor-grid">
-      <div>
-        <div class="col-head">Ninongs</div>
-        Mr. Raul Jacinto<br>
-        Mr. Joselito Isidro<br>
-        Mr. Apolo Velasco<br>
-        Mr. Ronaldo De Jesus<br>
-        Mr. David Galang<br>
-        Mr. Hiram Castro<br>
-        Mr. Edwin Dela Cruz<br>
-        Mr. Bienvenido Dela Cruz Jr.<br>
-        Mr. Raul Dela Cruz
-      </div>
-      <div>
-        <div class="col-head">Ninangs</div>
-        Mrs. Elizabeth Cruz<br>
-        Mrs. Joselina Galario<br>
-        Mrs. Dina Lazaro<br>
-        Mrs. Carolina Avancena<br>
-        Mrs. Jennie Castro<br>
-        Mrs. Ma. Lourdes Jugueta<br>
-        Mrs. Melisa Carlos<br>
-        Mrs. Priscila Asuncion<br>
-        Mrs. Cynthia Zamora
-      </div>
+      <div class="sponsor-name">Mr. Raul Jacinto</div>
+      <div class="sponsor-name">Mrs. Elizabeth Cruz</div>
+      <div class="sponsor-name">Mr. Joselito Isidro</div>
+      <div class="sponsor-name">Mrs. Joselina Galario</div>
+      <div class="sponsor-name">Mr. Apolo Velasco</div>
+      <div class="sponsor-name">Mrs. Dina Lazaro</div>
+      <div class="sponsor-name">Mr. Ronaldo De Jesus</div>
+      <div class="sponsor-name">Mrs. Carolina Avancena</div>
+      <div class="sponsor-name">Mr. David Galang</div>
+      <div class="sponsor-name">Mrs. Jennie Castro</div>
+      <div class="sponsor-name">Mr. Hiram Castro</div>
+      <div class="sponsor-name">Mrs. Ma. Lourdes Jugueta</div>
+      <div class="sponsor-name">Mr. Edwin Dela Cruz</div>
+      <div class="sponsor-name">Mrs. Melisa Carlos</div>
+      <div class="sponsor-name small-fit">Mr. Bienvenido Dela Cruz Jr.</div>
+      <div class="sponsor-name">Mrs. Priscila Asuncion</div>
+      <div class="sponsor-name">Mr. Raul Dela Cruz</div>
+      <div class="sponsor-name">Mrs. Cynthia Zamora</div>
     </div>
   </div>
 
@@ -700,9 +717,9 @@
   <div class="divider"></div>
 
   <div class="ent-block small-roles">
-    <div><span class="role-name">Candle Sponsors</span>Patrick Caluag &amp; Aubrey Dela Cruz</div>
-    <div><span class="role-name">Veil Sponsors</span>Zacharias Dens Pe &amp; Janna Alaine Pe</div>
-    <div><span class="role-name">Cord Sponsors</span>Melvin Delos Reyes &amp; Mary Rose Cooke</div>
+    <div><span class="role-name">Candle Sponsors</span>Patrick Caluag<br>Aubrey Dela Cruz</div>
+    <div><span class="role-name">Veil Sponsors</span>Zacharias Dens Pe<br>Janna Alaine Pe</div>
+    <div><span class="role-name">Cord Sponsors</span>Melvin Delos Reyes<br>Mary Rose Cooke</div>
     <div><span class="role-name">Bible Bearer</span>Mikaela Fabroa</div>
     <div><span class="role-name">Coin Bearer</span>Crisha Cahil Carlos</div>
     <div><span class="role-name">Ring Bearer</span>John Gabriel Cruz</div>
