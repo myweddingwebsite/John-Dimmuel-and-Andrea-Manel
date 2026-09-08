@@ -81,6 +81,21 @@
     margin-bottom:8px;
   }
 
+  /* photo-backed sections: consistent navy overlay for readability */
+  #day, #timeline, #entourage, #attire, #gift, #memories, #rsvp, #closing{
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+  #day .kicker, #timeline .kicker, #entourage .kicker, #attire .kicker,
+  #gift .kicker, #memories .kicker, #rsvp .kicker, #closing .kicker{
+    color:var(--powder);
+  }
+  #day .section-title, #timeline .section-title, #entourage .section-title, #attire .section-title,
+  #gift .section-title, #memories .section-title, #rsvp .section-title, #closing .section-title{
+    color:var(--white);
+  }
+
   /* ---------- hero ---------- */
   #hero{
     min-height:100svh;
@@ -90,8 +105,11 @@
     justify-content:center;
     padding:60px 24px;
     background:
-      radial-gradient(ellipse at 50% -10%, rgba(188,208,230,0.35) 0%, transparent 55%),
-      linear-gradient(180deg, var(--navy) 0%, var(--royal) 55%, #3a5c8f 100%);
+      radial-gradient(ellipse at 50% -10%, rgba(188,208,230,0.30) 0%, transparent 55%),
+      linear-gradient(180deg, rgba(20,33,64,0.82) 0%, rgba(38,63,105,0.72) 55%, rgba(52,84,131,0.68) 100%),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/1.jpg') center/cover no-repeat;
+    background-size:cover;
+    background-position:center;
     color:var(--white);
     text-align:center;
   }
@@ -188,7 +206,11 @@
   }
 
   /* ---------- our day ---------- */
-  #day{background:var(--ivory);}
+  #day{
+    background:
+      linear-gradient(180deg, rgba(20,33,64,0.72), rgba(38,63,105,0.66)),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/2.jpg') center/cover no-repeat;
+  }
   .day-cards{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -255,7 +277,11 @@
   }
 
   /* ---------- timeline ---------- */
-  #timeline{background:var(--powder-soft);}
+  #timeline{
+    background:
+      linear-gradient(180deg, rgba(20,33,64,0.72), rgba(38,63,105,0.66)),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/3.jpg') center/cover no-repeat;
+  }
   .tl{
     margin-top:50px;
     position:relative;
@@ -283,22 +309,27 @@
     height:11px;
     border-radius:50%;
     background:var(--white);
-    border:2px solid var(--royal);
+    border:2px solid var(--champagne);
   }
   .tl-time{
     font-size:16px;
     letter-spacing:1.5px;
-    color:var(--royal);
+    color:var(--champagne);
     font-style:italic;
     margin-bottom:2px;
   }
   .tl-title{
     font-size:23px;
-    color:var(--navy);
+    color:var(--white);
   }
 
   /* ---------- entourage ---------- */
-  #entourage{background:var(--ivory);}
+  #entourage{
+    background:
+      linear-gradient(180deg, rgba(20,33,64,0.75), rgba(38,63,105,0.7)),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/4.jpg') center/cover no-repeat;
+    color:var(--white);
+  }
   .ent-block{margin-top:56px;}
   .ent-block:first-of-type{margin-top:46px;}
   .ent-role{
@@ -306,12 +337,12 @@
     letter-spacing:2.5px;
     font-style:italic;
     font-weight:700;
-    color:var(--royal);
+    color:var(--champagne);
     margin-bottom:16px;
   }
   .ent-names{
     font-size:21px;
-    color:var(--navy);
+    color:var(--white);
   }
   .parents-cols{
     display:grid;
@@ -331,7 +362,7 @@
     grid-template-columns:1fr 1fr;
     gap:9px 20px;
     font-size:18px;
-    color:var(--navy);
+    color:var(--white);
     max-width:520px;
     margin:0 auto;
     text-align:center;
@@ -348,7 +379,7 @@
   .col-head{
     font-style:italic;
     font-weight:700;
-    color:var(--royal);
+    color:var(--champagne);
     font-size:15px;
     letter-spacing:1.5px;
     margin-bottom:8px;
@@ -369,7 +400,7 @@
     letter-spacing:2.5px;
     font-style:italic;
     font-weight:700;
-    color:var(--royal);
+    color:var(--champagne);
     margin:0 0 14px;
   }
   .party-cols ul{
@@ -377,7 +408,7 @@
     padding:0;
     margin:0;
     font-size:20px;
-    color:var(--navy);
+    color:var(--white);
     line-height:1.9;
   }
   .small-roles{
@@ -390,11 +421,16 @@
   @media (max-width:560px){
     .small-roles{gap:20px 16px; font-size:16px;}
   }
-  .small-roles .role-name{color:var(--royal); font-style:italic; font-weight:700; font-size:14px; letter-spacing:1.5px; display:block; margin-bottom:4px;}
+  .small-roles .role-name{color:var(--champagne); font-style:italic; font-weight:700; font-size:14px; letter-spacing:1.5px; display:block; margin-bottom:4px;}
   .small-roles .span-2{grid-column:1 / -1;}
 
   /* ---------- attire ---------- */
-  #attire{background:var(--royal); color:var(--white);}
+  #attire{
+    background:
+      linear-gradient(180deg, rgba(20,33,64,0.78), rgba(38,63,105,0.72)),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/5.jpg') center/cover no-repeat;
+    color:var(--white);
+  }
   #attire .section-title, #attire .kicker{color:var(--white);}
   #attire .kicker{color:var(--powder);}
   .attire-cards{
@@ -437,11 +473,17 @@
   }
 
   /* ---------- gift ---------- */
-  #gift{background:var(--ivory);}
+  #gift{
+    background:
+      linear-gradient(180deg, rgba(20,33,64,0.72), rgba(38,63,105,0.66)),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/6.jpg') center/cover no-repeat;
+    color:var(--white);
+  }
   .gift-note{
     max-width:480px;
     margin:0 auto;
     font-size:20px;
+    color:var(--powder-soft);
   }
   .gift-methods{
     display:grid;
@@ -463,7 +505,7 @@
     font-size:15px;
     letter-spacing:2px;
     font-style:italic;
-    color:var(--royal);
+    color:var(--champagne);
   }
   .qr-box{
     width:150px;
@@ -500,7 +542,11 @@
   }
 
   /* ---------- share memories ---------- */
-  #memories{background:var(--powder-soft);}
+  #memories{
+    background:
+      linear-gradient(180deg, rgba(20,33,64,0.72), rgba(38,63,105,0.66)),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/7.jpg') center/cover no-repeat;
+  }
   .memories-qr-wrap{
     margin-top:44px;
     display:flex;
@@ -522,16 +568,109 @@
     background:var(--white);
     border:1px solid var(--powder);
     position:relative;
+    padding:0;
+    cursor:pointer;
+    overflow:hidden;
+    display:block;
+    width:100%;
+  }
+  .gallery-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.4s ease;
+  }
+  .gallery-frame:hover img{
+    transform:scale(1.06);
   }
   .gallery-frame::before{
     content:"";
     position:absolute;
     top:8px; left:8px; right:8px; bottom:8px;
-    border:1px solid var(--powder-soft);
+    border:1px solid rgba(255,255,255,0.6);
+    pointer-events:none;
+    z-index:2;
+  }
+
+  /* ---------- lightbox ---------- */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(10,16,32,0.94);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+    padding:24px;
+  }
+  .lightbox.open{
+    display:flex;
+  }
+  .lightbox-img{
+    max-width:min(88vw, 900px);
+    max-height:82vh;
+    object-fit:contain;
+    border:1px solid rgba(255,255,255,0.2);
+  }
+  .lightbox-close{
+    position:absolute;
+    top:20px;
+    right:24px;
+    background:none;
+    border:none;
+    color:var(--white);
+    font-size:34px;
+    line-height:1;
+    cursor:pointer;
+    padding:6px 10px;
+  }
+  .lightbox-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.35);
+    color:var(--white);
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    font-size:18px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background 0.2s ease;
+  }
+  .lightbox-nav:hover{
+    background:rgba(255,255,255,0.25);
+  }
+  .lightbox-prev{left:16px;}
+  .lightbox-next{right:16px;}
+  @media (max-width:560px){
+    .lightbox-nav{width:38px; height:38px; font-size:15px;}
+    .lightbox-prev{left:8px;}
+    .lightbox-next{right:8px;}
+    .lightbox-close{top:12px; right:14px; font-size:28px;}
+  }
+  .lightbox-counter{
+    position:absolute;
+    bottom:22px;
+    left:50%;
+    transform:translateX(-50%);
+    color:var(--powder-soft);
+    font-size:14px;
+    letter-spacing:1.5px;
+    font-style:italic;
   }
 
   /* ---------- rsvp ---------- */
-  #rsvp{background:var(--navy); color:var(--white);}
+  #rsvp{
+    background:
+      linear-gradient(180deg, rgba(20,33,64,0.8), rgba(38,63,105,0.74)),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/8.jpg') center/cover no-repeat;
+    color:var(--white);
+  }
   #rsvp .section-title{color:var(--white);}
   #rsvp .kicker{color:var(--powder);}
   .rsvp-copy{
@@ -562,6 +701,31 @@
   .rsvp-btn:hover{
     background:var(--powder);
     color:var(--navy);
+  }
+
+  /* ---------- closing ---------- */
+  #closing{
+    background:
+      linear-gradient(180deg, rgba(20,33,64,0.8), rgba(38,63,105,0.74)),
+      url('https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/9.jpg') center/cover no-repeat;
+    color:var(--white);
+    padding-top:130px;
+    padding-bottom:130px;
+  }
+  #closing .kicker{color:var(--powder);}
+  #closing .section-title{color:var(--white);}
+  .closing-verse{
+    max-width:440px;
+    margin:18px auto 0;
+    font-size:20px;
+    font-style:italic;
+    color:var(--powder-soft);
+  }
+  .closing-names{
+    font-family:'Parisienne', cursive;
+    font-size:clamp(38px, 7vw, 56px);
+    color:var(--white);
+    margin-top:28px;
   }
 
   footer{
@@ -765,7 +929,7 @@
   <h2 class="section-title">Attire Guide</h2>
 
   <div class="attire-image-wrap">
-    <img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/attires1.png" alt="Attire guide for gentlemen and ladies">
+    <img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/attires.png" alt="Attire guide for gentlemen and ladies">
   </div>  </div>
 </section>
 
@@ -802,16 +966,36 @@
   <div class="section-inner">  <div class="kicker">Our Story in Pictures</div>
   <h2 class="section-title">Gallery</h2>
 
-  <div class="gallery-grid">
-    <div class="gallery-frame"></div>
-    <div class="gallery-frame"></div>
-    <div class="gallery-frame"></div>
-    <div class="gallery-frame"></div>
-    <div class="gallery-frame"></div>
-    <div class="gallery-frame"></div>
+  <div class="gallery-grid" id="galleryGrid">
+    <button class="gallery-frame" data-index="0"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/10.jpg" alt="Gallery photo 1" loading="lazy"></button>
+    <button class="gallery-frame" data-index="1"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/11.jpg" alt="Gallery photo 2" loading="lazy"></button>
+    <button class="gallery-frame" data-index="2"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/12.jpg" alt="Gallery photo 3" loading="lazy"></button>
+    <button class="gallery-frame" data-index="3"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/13.jpg" alt="Gallery photo 4" loading="lazy"></button>
+    <button class="gallery-frame" data-index="4"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/14.jpg" alt="Gallery photo 5" loading="lazy"></button>
+    <button class="gallery-frame" data-index="5"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/15.jpg" alt="Gallery photo 6" loading="lazy"></button>
+    <button class="gallery-frame" data-index="6"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/16.jpg" alt="Gallery photo 7" loading="lazy"></button>
+    <button class="gallery-frame" data-index="7"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/17.jpg" alt="Gallery photo 8" loading="lazy"></button>
+    <button class="gallery-frame" data-index="8"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/18.jpg" alt="Gallery photo 9" loading="lazy"></button>
+    <button class="gallery-frame" data-index="9"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/1.jpg" alt="Gallery photo 10" loading="lazy"></button>
+    <button class="gallery-frame" data-index="10"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/2.jpg" alt="Gallery photo 11" loading="lazy"></button>
+    <button class="gallery-frame" data-index="11"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/3.jpg" alt="Gallery photo 12" loading="lazy"></button>
+    <button class="gallery-frame" data-index="12"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/4.jpg" alt="Gallery photo 13" loading="lazy"></button>
+    <button class="gallery-frame" data-index="13"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/5.jpg" alt="Gallery photo 14" loading="lazy"></button>
+    <button class="gallery-frame" data-index="14"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/6.jpg" alt="Gallery photo 15" loading="lazy"></button>
+    <button class="gallery-frame" data-index="15"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/7.jpg" alt="Gallery photo 16" loading="lazy"></button>
+    <button class="gallery-frame" data-index="16"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/8.jpg" alt="Gallery photo 17" loading="lazy"></button>
+    <button class="gallery-frame" data-index="17"><img src="https://ik.imagekit.io/jcsquo5nq/Dream%20and%20JD/9.jpg" alt="Gallery photo 18" loading="lazy"></button>
   </div>
   </div>
 </section>
+
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">&#10094;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged gallery photo">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">&#10095;</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
 
 <section id="rsvp" class="reveal">
   <div class="section-inner">  <div class="kicker">Kindly Respond</div>
@@ -819,6 +1003,15 @@
   <p class="rsvp-copy">We would be delighted to have you join us on our special day. Please let us know if you'll be there.</p>
   <div class="rsvp-deadline">Kindly respond by October 25, 2026</div>
   <a class="rsvp-btn" href="https://script.google.com/macros/s/AKfycbwwjK_pVTyqhgcOH2ValwG4bfHKcUpKR8PbZPRg070Q_OdC5uMMOlyu8vbxUcvI8nYPqg/exec" target="_blank" rel="noopener">RSVP Now</a>  </div>
+</section>
+
+<section id="closing" class="reveal">
+  <div class="section-inner">
+  <div class="kicker">With Gratitude</div>
+  <h2 class="section-title">Thank You</h2>
+  <p class="closing-verse">To our family and friends who have shaped our story — thank you for standing beside us as we begin this new chapter. We can't wait to celebrate with you.</p>
+  <div class="closing-names">JD &amp; Dream</div>
+  </div>
 </section>
 
 <footer>
@@ -860,6 +1053,75 @@
     });
   }, {threshold:0.12});
   revealEls.forEach(el=>io.observe(el));
+
+  // gallery lightbox
+  const galleryImages = Array.from(document.querySelectorAll('#galleryGrid .gallery-frame img')).map(img => ({
+    src: img.getAttribute('src'),
+    alt: img.getAttribute('alt')
+  }));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  let currentIndex = 0;
+
+  function showImage(index){
+    currentIndex = (index + galleryImages.length) % galleryImages.length;
+    const item = galleryImages[currentIndex];
+    lightboxImg.src = item.src;
+    lightboxImg.alt = item.alt;
+    lightboxCounter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+  }
+
+  function openLightbox(index){
+    showImage(index);
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('#galleryGrid .gallery-frame').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      openLightbox(parseInt(btn.getAttribute('data-index'), 10));
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', ()=> showImage(currentIndex - 1));
+  lightboxNext.addEventListener('click', ()=> showImage(currentIndex + 1));
+
+  lightbox.addEventListener('click', (e)=>{
+    if(e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e)=>{
+    if(!lightbox.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') showImage(currentIndex - 1);
+    if(e.key === 'ArrowRight') showImage(currentIndex + 1);
+  });
+
+  // basic swipe support on mobile
+  let touchStartX = null;
+  lightbox.addEventListener('touchstart', (e)=>{
+    touchStartX = e.changedTouches[0].clientX;
+  });
+  lightbox.addEventListener('touchend', (e)=>{
+    if(touchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if(Math.abs(dx) > 40){
+      dx > 0 ? showImage(currentIndex - 1) : showImage(currentIndex + 1);
+    }
+    touchStartX = null;
+  });
 </script>
 
 </body>
